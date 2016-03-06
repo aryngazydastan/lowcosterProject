@@ -23,7 +23,7 @@
 		width: 350px;
 		margin: auto;
 		text-align: left;
-		background: #462B43;
+		background: #808080;
 		padding: 50px 60px;
 		border: solid #ddd;
 		border-width: 0 1px 1px 1px;
@@ -190,7 +190,7 @@ query.find({
 			var address =  object.get('address');
 			var date = object.get('createdAt').toLocaleString();
 				(function ($) {
-					$('#results-table').append('<tr><td id="1">' + from + '</br>' + to + '</td><td id="2">'  + cost + ' тенге' + '</td></tr>');
+					$('#results-table').append('<tr><td id="1">' + from + '</br>' + to + '</td><td id="2">'  + cost + ' тенге / необходимо скачать приложение' + '</td></tr>');
 
 				})(jQuery);
         }
