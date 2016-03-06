@@ -183,14 +183,14 @@ var query = new Parse.Query(GameScore);
 query.find({
     success: function (results) {
         for (var i = 0; i < results.length; i++) {
+        	(function ($) {
+					$('#results-table').append('<tr><td id="1">' + from + '</br>' + to + '</td><td id="2">'  + cost + ' тенге / необходимо скачать приложение' + '</td></tr>');
             var object = results[i];
 			var cost = object.get('cost');
 			var from = object.get('from');
 			var to = object.get('to');
 			var address =  object.get('address');
 			var date = object.get('createdAt').toLocaleString();
-				(function ($) {
-					$('#results-table').append('<tr><td id="1">' + from + '</br>' + to + '</td><td id="2">'  + cost + ' тенге / необходимо скачать приложение' + '</td></tr>');
 
 				})(jQuery);
         }
