@@ -182,7 +182,7 @@ var GameScore = Parse.Object.extend("Client");
 var query = new Parse.Query(GameScore);
 query.find({
     success: function (results) {
-        for (var i = 0; i > results.length; i++) {
+        for (var i = results.length; i >= 0; i--) {
             var object = results[i];
 			var cost = object.get('cost');
 			var from = object.get('from');
